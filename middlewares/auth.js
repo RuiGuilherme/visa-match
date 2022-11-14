@@ -23,6 +23,7 @@ const getPermissionFromURL = (url) => {
 }
 
 export const authenticateToken = (req, res, next) => {
+	return next(); // isso é só para testar, depois tirar. Apenas para simular um mock das permissões.
 	const token = req.headers['authorization']
 	const PermissionURL = getPermissionFromURL(req.originalUrl)
 
